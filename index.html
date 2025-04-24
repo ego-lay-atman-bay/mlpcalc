@@ -12,8 +12,9 @@
       var iframe;
 
       window.addEventListener("message", function (e) {
+        console.log('origin', e.origin)
         console.log('is localhost', isLocalhost())
-        if (e.origin != "https://mlpcalc.github.io" && !isLocalhost()) return;
+        if (e.origin != "https://ego-lay-atman-bay.github.io" && !isLocalhost()) return;
         iframe.style.height = e.data + "px";
         // iframe.style.width = Math.ceil(iframe.contentWindow.document.body.scrollWidth) + 'px';
         // iframe.style.height = Math.ceil(iframe.contentWindow.document.body.scrollHeight) + 'px';
